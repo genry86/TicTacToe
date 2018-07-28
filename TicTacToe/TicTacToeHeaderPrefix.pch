@@ -1,0 +1,22 @@
+//
+//  TicTacToeHeaderPrefix.pch
+//  TicTacToe
+//
+//  Created by Genry on 7/28/18.
+//  Copyright © 2018 Genry. All rights reserved.
+//
+
+#ifndef TicTacToeHeaderPrefix_pch
+#define TicTacToeHeaderPrefix_pch
+
+#import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
+
+#import "Constants.h"
+#import "AppState.h"
+#import "GameBoard.h"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* TicTacToeHeaderPrefix_pch */
