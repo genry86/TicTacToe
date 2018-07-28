@@ -87,6 +87,8 @@
         }
             break;
     }
+    
+    self.turnLabel.text = [NSString stringWithFormat:@"%@'s turn", AppState.sharedInstance.currentSymbol];
 }
 
 @end
