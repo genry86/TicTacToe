@@ -9,6 +9,7 @@
 #import "GameViewController.h"
 
 @interface GameViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *turnLabel;
 
 @end
 
@@ -32,6 +33,11 @@
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskAll;
+}
+
+- (IBAction)tapCell:(UIButton *)sender
+{
+
 }
 
 @end
