@@ -87,7 +87,24 @@
                     <view key="view" contentMode="scaleToFill" id="Qcq-h1-lmy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="300" verticalHuggingPriority="300" translatesAutoresizingMaskIntoConstraints="NO" id="guo-Ox-dF2">
+                                <rect key="frame" x="18.5" y="175" width="337.5" height="337.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="guo-Ox-dF2" secondAttribute="height" multiplier="1:1" id="g3J-AX-sn0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="guo-Ox-dF2" firstAttribute="centerX" secondItem="8cz-uN-91g" secondAttribute="centerX" priority="750" id="6ko-OX-0k3"/>
+                            <constraint firstItem="guo-Ox-dF2" firstAttribute="centerY" secondItem="8cz-uN-91g" secondAttribute="centerY" priority="750" id="7Cw-0F-G0Z"/>
+                            <constraint firstItem="guo-Ox-dF2" firstAttribute="width" relation="lessThanOrEqual" secondItem="Qcq-h1-lmy" secondAttribute="width" multiplier="0.9" priority="900" id="aut-BC-W6n"/>
+                            <constraint firstItem="guo-Ox-dF2" firstAttribute="height" relation="lessThanOrEqual" secondItem="Qcq-h1-lmy" secondAttribute="height" multiplier="0.9" priority="900" id="ffn-cG-ckX"/>
+                            <constraint firstItem="guo-Ox-dF2" firstAttribute="width" secondItem="Qcq-h1-lmy" secondAttribute="width" multiplier="0.9" priority="500" id="ls5-CM-zgW"/>
+                            <constraint firstItem="guo-Ox-dF2" firstAttribute="height" secondItem="Qcq-h1-lmy" secondAttribute="height" multiplier="0.9" priority="500" id="sZR-h4-kOd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8cz-uN-91g"/>
                     </view>
                 </viewController>
