@@ -37,7 +37,56 @@
 
 - (IBAction)tapCell:(UIButton *)sender
 {
-
+    switch (sender.tag)
+    {
+        case TTCellPosLeftTop:
+        {
+            
+        }
+            break;
+        case TTCellPosMiddleTop:
+        {
+            
+        }
+            break;
+        case TTCellPosRightTop:
+        {
+            
+        }
+            break;
+            
+        case TTCellPosLeftMiddle:
+        {
+            
+        }
+            break;
+        case TTCellPosCenter:
+        {
+            
+        }
+            break;
+        case TTCellPosRightMiddle:
+        {
+            
+        }
+            break;
+        
+        case TTCellPosLeftBottom:
+        {
+            
+        }
+            break;
+        case TTCellPosMiddleBottom:
+        {
+            
+        }
+            break;
+        case TTCellPosRightBottom:
+        {
+            
+        }
+            break;
+    }
 }
 
 @end

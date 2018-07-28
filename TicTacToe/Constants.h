@@ -14,5 +14,17 @@ extern NSString *const kBoardEmptyCell;
 
 extern NSInteger const kBoardLimit;
 
+typedef NS_ENUM(NSUInteger, TTCellPos){
+   TTCellPosLeftTop = 1,
+   TTCellPosMiddleTop,
+   TTCellPosRightTop,
+   TTCellPosLeftMiddle,
+   TTCellPosCenter,
+   TTCellPosRightMiddle,
+   TTCellPosLeftBottom,
+   TTCellPosMiddleBottom,
+   TTCellPosRightBottom
+};
+
 @interface Constants : NSObject
 @end
