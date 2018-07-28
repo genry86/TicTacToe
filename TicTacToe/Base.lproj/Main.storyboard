@@ -22,9 +22,25 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zg4-JM-aUS">
                                 <rect key="frame" x="56.5" y="212.5" width="262.5" height="262.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSp-5g-KRx">
+                                        <rect key="frame" x="38.5" y="0.0" width="184" height="65.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Start as X"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.89252752589999995" green="0.35885208610000002" blue="0.28238363929999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="NSp-5g-KRx" firstAttribute="top" secondItem="Zg4-JM-aUS" secondAttribute="top" id="K4g-y6-QWQ"/>
+                                    <constraint firstItem="NSp-5g-KRx" firstAttribute="centerX" secondItem="Zg4-JM-aUS" secondAttribute="centerX" id="OGo-0C-xmC"/>
                                     <constraint firstAttribute="width" secondItem="Zg4-JM-aUS" secondAttribute="height" multiplier="1:1" id="OmK-q1-bXz"/>
+                                    <constraint firstItem="NSp-5g-KRx" firstAttribute="width" secondItem="Zg4-JM-aUS" secondAttribute="width" multiplier="0.7" id="Xmz-ak-Ltl"/>
+                                    <constraint firstItem="NSp-5g-KRx" firstAttribute="height" secondItem="Zg4-JM-aUS" secondAttribute="height" multiplier="0.25" id="gfG-sE-p0M"/>
                                 </constraints>
                             </view>
                         </subviews>
