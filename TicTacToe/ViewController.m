@@ -30,8 +30,13 @@
     return YES;
 }
 
-- (NSUInteger)supportedInterfaceOrientations
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskAll;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    AppState.sharedInstance.currentSymbol = [segue.identifier isEqualToString:@"StartAsXSegue"] ? kBoardXCell : kBoardOCell;
 }
 @end

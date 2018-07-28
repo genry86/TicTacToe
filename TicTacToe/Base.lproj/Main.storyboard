@@ -32,6 +32,9 @@
                                                 <integer key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="BNK-4L-Mpd" kind="show" identifier="StartAsXSegue" id="UU9-mP-VWE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWh-Rg-AJf">
                                         <rect key="frame" x="39" y="197" width="184" height="65.5"/>
@@ -42,6 +45,9 @@
                                                 <integer key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="BNK-4L-Mpd" kind="show" identifier="StartAsOSegue" id="qrr-G4-QRx"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -74,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="129.98500749625188"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="IqO-Kz-d9H">
             <objects>
-                <viewController id="BNK-4L-Mpd" sceneMemberID="viewController">
+                <viewController id="BNK-4L-Mpd" customClass="GameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qcq-h1-lmy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,4 +96,7 @@
             <point key="canvasLocation" x="1022" y="130"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qrr-G4-QRx"/>
+    </inferredMetricsTieBreakers>
 </document>

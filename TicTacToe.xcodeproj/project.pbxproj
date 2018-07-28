@@ -20,6 +20,7 @@
 		BBD7505E210C7A0700D35A42 /* AppStateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD7505D210C7A0700D35A42 /* AppStateTests.m */; };
 		BBD75060210C89CD00D35A42 /* GameBoardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD7505F210C89CD00D35A42 /* GameBoardTests.m */; };
 		BBD75063210C8AE600D35A42 /* GameBoard+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD75062210C8AE600D35A42 /* GameBoard+Private.m */; };
+		BBD75066210CC18400D35A42 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD75065210CC18400D35A42 /* GameViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		BBD7505F210C89CD00D35A42 /* GameBoardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameBoardTests.m; sourceTree = "<group>"; };
 		BBD75061210C8AE600D35A42 /* GameBoard+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GameBoard+Private.h"; sourceTree = "<group>"; };
 		BBD75062210C8AE600D35A42 /* GameBoard+Private.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GameBoard+Private.m"; sourceTree = "<group>"; };
+		BBD75064210CC18400D35A42 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		BBD75065210CC18400D35A42 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				BBD75059210C49C300D35A42 /* TicTacToeHeaderPrefix.pch */,
 				BBD7505A210C616900D35A42 /* Constants.h */,
 				BBD7505B210C616900D35A42 /* Constants.m */,
+				BBD75064210CC18400D35A42 /* GameViewController.h */,
+				BBD75065210CC18400D35A42 /* GameViewController.m */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBD75066210CC18400D35A42 /* GameViewController.m in Sources */,
 				BBD7502F210B795D00D35A42 /* ViewController.m in Sources */,
 				BBD75056210C43FF00D35A42 /* AppState.m in Sources */,
 				BBD7503A210B795F00D35A42 /* main.m in Sources */,
