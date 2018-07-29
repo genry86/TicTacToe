@@ -52,7 +52,7 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
     
-    CGContextSetLineWidth(context, 5.0f);
+    CGContextSetLineWidth(context, 10.0f);
     
     CGContextMoveToPoint(context, startX, startY); //start at this point
     CGContextAddLineToPoint(context, endX, endY); //draw to this point
