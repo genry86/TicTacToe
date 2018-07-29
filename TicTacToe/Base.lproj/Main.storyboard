@@ -97,6 +97,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="mhd-UB-0D1" secondAttribute="height" multiplier="1:1" id="WIr-TC-QGT"/>
                                         </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -107,6 +108,7 @@
                                     <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yk-qz-ATr" userLabel="LeftBottom">
                                         <rect key="frame" x="0.0" y="204.5" width="96" height="96"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <state key="normal">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -120,6 +122,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="qFq-if-GE4" secondAttribute="height" multiplier="1:1" id="ea4-SI-wtu"/>
                                         </constraints>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <connections>
                                             <action selector="tapCell:" destination="BNK-4L-Mpd" eventType="touchUpInside" id="eba-ln-mbi"/>
                                         </connections>
@@ -127,6 +130,7 @@
                                     <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJI-vQ-mnR" userLabel="RightBottom">
                                         <rect key="frame" x="204.5" y="204.5" width="96" height="96"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <action selector="tapCell:" destination="BNK-4L-Mpd" eventType="touchUpInside" id="vwg-61-r4K"/>
                                         </connections>
@@ -134,6 +138,7 @@
                                     <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcf-2w-hay" userLabel="MiddleTop">
                                         <rect key="frame" x="103" y="0.0" width="95.5" height="96"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <connections>
                                             <action selector="tapCell:" destination="BNK-4L-Mpd" eventType="touchUpInside" id="evn-Qw-6CE"/>
                                         </connections>
@@ -141,6 +146,7 @@
                                     <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzR-yA-djY" userLabel="MiddleBottom">
                                         <rect key="frame" x="103" y="204.5" width="94.5" height="96"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <connections>
                                             <action selector="tapCell:" destination="BNK-4L-Mpd" eventType="touchUpInside" id="YdG-PG-nlj"/>
                                         </connections>
@@ -148,6 +154,7 @@
                                     <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GiZ-Bt-Oae" userLabel="LeftMiddle">
                                         <rect key="frame" x="0.0" y="103" width="96" height="94.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <connections>
                                             <action selector="tapCell:" destination="BNK-4L-Mpd" eventType="touchUpInside" id="oRj-y6-Wnh"/>
                                         </connections>
@@ -155,6 +162,7 @@
                                     <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaS-Td-cdB" userLabel="RightMiddle">
                                         <rect key="frame" x="204.5" y="103" width="96" height="94.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <connections>
                                             <action selector="tapCell:" destination="BNK-4L-Mpd" eventType="touchUpInside" id="f0c-H2-ZV3"/>
                                         </connections>
@@ -162,6 +170,7 @@
                                     <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7D9-Ri-DMc" userLabel="Center">
                                         <rect key="frame" x="103" y="103" width="94.5" height="94.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <connections>
                                             <action selector="tapCell:" destination="BNK-4L-Mpd" eventType="touchUpInside" id="JWZ-Gx-lb7"/>
                                         </connections>
