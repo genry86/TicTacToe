@@ -231,6 +231,7 @@
                     </view>
                     <connections>
                         <outlet property="turnLabel" destination="Q1l-bm-e51" id="Rkw-cX-UPS"/>
+                        <outlet property="winView" destination="wbW-G2-l18" id="8Q8-Ja-654"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ge0-IA-DDK" userLabel="First Responder" sceneMemberID="firstResponder"/>

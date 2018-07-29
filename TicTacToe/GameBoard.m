@@ -23,7 +23,7 @@
 
 - (void)tapOnRow:(NSUInteger)row andColumn:(NSUInteger)column winLine:(WinLine **)winLine
 {
-    AppState.sharedInstance.board[row][column] = AppState.sharedInstance.currentSymbol;
+    AppState.sharedInstance.board[row - 1][column - 1] = AppState.sharedInstance.currentSymbol;
     
     *winLine = [GameBoard.sharedInstance checkWinLine];
     if (*winLine) {

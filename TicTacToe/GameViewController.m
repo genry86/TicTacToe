@@ -7,9 +7,11 @@
 //
 
 #import "GameViewController.h"
+#import "WinView.h"
 
 @interface GameViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *turnLabel;
+@property (weak, nonatomic) IBOutlet WinView *winView;
 
 @end
 

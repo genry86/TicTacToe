@@ -14,5 +14,6 @@
 + (GameBoard *)sharedInstance;
 
 - (void)tapOnRow:(NSUInteger)row andColumn:(NSUInteger)column winLine:(WinLine **)winLine;
+- (BOOL)checkAbilityToTap;
 
 @end

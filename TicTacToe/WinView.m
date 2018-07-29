@@ -7,6 +7,13 @@
 //
 
 #import "WinView.h"
+#import "WinLine.h"
+
+@interface WinView ()
+
+@property (nonatomic, strong) WinLine *winLine;
+
+@end
 
 @implementation WinView
 
@@ -16,25 +23,39 @@
     if (self) {
         self.backgroundColor = UIColor.clearColor;
     }
-    
     return self;
+}
+
+- (void)drawLine:(WinLine *)winLine
+{
+    self.winLine = winLine;
+    [self setNeedsDisplay];
 }
 
 - (void)drawRect:(CGRect)rect
 {
     [super drawRect:rect];
     
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor);
+    if (!self.winLine) {
+        return;
+    }
     
-    // Draw them with a 2.0 stroke width so they are a bit more visible.
+    int unit = rect.size.width / 6;    // middle of one cell
+    
+    double startX = self.winLine.col1.intValue * unit;
+    double startY = self.winLine.row1.intValue * unit;
+    
+    double endX = self.winLine.col2.intValue * unit;
+    double endY = self.winLine.row2.intValue * unit;
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
+    
     CGContextSetLineWidth(context, 2.0f);
     
-    CGContextMoveToPoint(context, 0.0f, 0.0f); //start at this point
+    CGContextMoveToPoint(context, startX, startY); //start at this point
+    CGContextAddLineToPoint(context, endX, endY); //draw to this point
     
-    CGContextAddLineToPoint(context, 20.0f, 20.0f); //draw to this point
-    
-    // and now draw the Path!
     CGContextStrokePath(context);
 }
 

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class WinLine;
 
 @interface WinView : UIView
+
+- (void)drawLine:(WinLine *)winLine;
 
 @end

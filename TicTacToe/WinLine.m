@@ -14,11 +14,11 @@
 {
     self = [super init];
     if (self) {
-        self.row1 = @(firstPoint.y);
-        self.col1 = @(firstPoint.x);
+        self.row1 = @(firstPoint.y + 1);
+        self.col1 = @(firstPoint.x + 1);
         
-        self.row2 = @(secondPoint.y);
-        self.col2 = @(secondPoint.x);
+        self.row2 = @(secondPoint.y + 1);
+        self.col2 = @(secondPoint.x + 1);
     }
     return self;
 }

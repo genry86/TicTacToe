@@ -19,7 +19,6 @@
 		BBD7505C210C616900D35A42 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD7505B210C616900D35A42 /* Constants.m */; };
 		BBD7505E210C7A0700D35A42 /* AppStateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD7505D210C7A0700D35A42 /* AppStateTests.m */; };
 		BBD75060210C89CD00D35A42 /* GameBoardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD7505F210C89CD00D35A42 /* GameBoardTests.m */; };
-		BBD75063210C8AE600D35A42 /* GameBoard+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD75062210C8AE600D35A42 /* GameBoard+Private.m */; };
 		BBD75066210CC18400D35A42 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD75065210CC18400D35A42 /* GameViewController.m */; };
 		BBD75069210D0C2700D35A42 /* WinView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD75068210D0C2700D35A42 /* WinView.m */; };
 /* End PBXBuildFile section */
@@ -58,8 +57,6 @@
 		BBD7505B210C616900D35A42 /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		BBD7505D210C7A0700D35A42 /* AppStateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppStateTests.m; sourceTree = "<group>"; };
 		BBD7505F210C89CD00D35A42 /* GameBoardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameBoardTests.m; sourceTree = "<group>"; };
-		BBD75061210C8AE600D35A42 /* GameBoard+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GameBoard+Private.h"; sourceTree = "<group>"; };
-		BBD75062210C8AE600D35A42 /* GameBoard+Private.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GameBoard+Private.m"; sourceTree = "<group>"; };
 		BBD75064210CC18400D35A42 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		BBD75065210CC18400D35A42 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		BBD75067210D0C2700D35A42 /* WinView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WinView.h; sourceTree = "<group>"; };
@@ -137,8 +134,6 @@
 				BBD75045210B796000D35A42 /* Info.plist */,
 				BBD7505D210C7A0700D35A42 /* AppStateTests.m */,
 				BBD7505F210C89CD00D35A42 /* GameBoardTests.m */,
-				BBD75061210C8AE600D35A42 /* GameBoard+Private.h */,
-				BBD75062210C8AE600D35A42 /* GameBoard+Private.m */,
 			);
 			path = TicTacToeTests;
 			sourceTree = "<group>";
@@ -260,7 +255,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBD7505E210C7A0700D35A42 /* AppStateTests.m in Sources */,
-				BBD75063210C8AE600D35A42 /* GameBoard+Private.m in Sources */,
 				BBD75060210C89CD00D35A42 /* GameBoardTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
