@@ -12,15 +12,20 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    __weak typeof(self) weakSelf = self;
     
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    UIViewController *currentController = navigationController.visibleViewController;
+    StartViewController *startViewController = (StartViewController *)navigationController.visibleViewController;
     
-    if (AppState.restoreState) {
-        [currentController performSegueWithIdentifier:@"StartAsXSegue" sender:self];
-    }
+    [BoardImagesManager.sharedInstance downloadBoardImagesWithBlock:
+     ^{
+         [startViewController enableUI];
+         if (AppState.restoreState) {
+             [startViewController performSegueWithIdentifier:@"StartAsXSegue" sender:weakSelf];
+         }
+     }];
     
     return YES;
 }

@@ -8,7 +8,21 @@
 
 #import "StartViewController.h"
 
+@interface StartViewController ()
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UIButton *startXButton;
+@property (weak, nonatomic) IBOutlet UIButton *startYButton;
+@end
+
 @implementation StartViewController
+
+#pragma mark - View lifecycle
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
 
 - (BOOL)shouldAutorotate
 {
@@ -20,16 +34,17 @@
     return UIInterfaceOrientationMaskAll;
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([sender isKindOfClass:UIButton.class]) {
         AppState.sharedInstance.currentSymbol = [sender tag] ? kBoardXCell : kBoardOCell;   // 1 - X, 0 - O
     }
+}
+
+- (void)enableUI
+{
+    [self.activityIndicator stopAnimating];
+    self.startXButton.enabled = YES;
+    self.startYButton.enabled = YES;
 }
 @end

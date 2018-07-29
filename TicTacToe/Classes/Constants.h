@@ -19,5 +19,10 @@ typedef NS_ENUM(NSUInteger, StepStatus)
    StepStatusWin
 };
 
+typedef void(^CompletionBlock)(void);
+
+extern NSString *const kXImageUrl;
+extern NSString *const kOImageUrl;
+
 @interface Constants : NSObject
 @end

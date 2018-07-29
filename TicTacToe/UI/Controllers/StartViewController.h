@@ -11,5 +11,8 @@
  */
 
 @interface StartViewController : UIViewController
+
+- (void)enableUI;
+
 @end
 

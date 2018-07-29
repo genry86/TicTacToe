@@ -12,10 +12,10 @@
 
 + (ShareApiUtility *)sharedInstance
 {
-    static GameBoard *instance = nil;
+    static ShareApiUtility *instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [[GameBoard alloc] init];
+        instance = [[ShareApiUtility alloc] init];
     });
     return instance;
 }

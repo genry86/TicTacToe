@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BB4AC774210E0E9E005C3934 /* ShareApiUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = BB4AC773210E0E9E005C3934 /* ShareApiUtility.m */; };
+		BB4AC77A210E4275005C3934 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB4AC779210E4275005C3934 /* SystemConfiguration.framework */; };
+		BB4AC781210E5C11005C3934 /* BoardImagesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB4AC780210E5C11005C3934 /* BoardImagesManager.m */; };
 		BBD7502C210B795D00D35A42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD7502B210B795D00D35A42 /* AppDelegate.m */; };
 		BBD7502F210B795D00D35A42 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD7502E210B795D00D35A42 /* StartViewController.m */; };
 		BBD75032210B795D00D35A42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBD75030210B795D00D35A42 /* Main.storyboard */; };
@@ -39,6 +41,9 @@
 /* Begin PBXFileReference section */
 		BB4AC772210E0E9E005C3934 /* ShareApiUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareApiUtility.h; sourceTree = "<group>"; };
 		BB4AC773210E0E9E005C3934 /* ShareApiUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareApiUtility.m; sourceTree = "<group>"; };
+		BB4AC779210E4275005C3934 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BB4AC77F210E5C11005C3934 /* BoardImagesManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoardImagesManager.h; sourceTree = "<group>"; };
+		BB4AC780210E5C11005C3934 /* BoardImagesManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoardImagesManager.m; sourceTree = "<group>"; };
 		BBD75027210B795D00D35A42 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD7502A210B795D00D35A42 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BBD7502B210B795D00D35A42 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -76,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB4AC77A210E4275005C3934 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,12 +95,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB4AC778210E4275005C3934 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB4AC779210E4275005C3934 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB4AC77E210E5BF0005C3934 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BB4AC77F210E5C11005C3934 /* BoardImagesManager.h */,
+				BB4AC780210E5C11005C3934 /* BoardImagesManager.m */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		BBD7501E210B795D00D35A42 = {
 			isa = PBXGroup;
 			children = (
 				BBD75029210B795D00D35A42 /* TicTacToe */,
 				BBD75042210B796000D35A42 /* TicTacToeTests */,
 				BBD75028210B795D00D35A42 /* Products */,
+				BB4AC778210E4275005C3934 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +134,8 @@
 		BBD75029210B795D00D35A42 /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				BB4AC77E210E5BF0005C3934 /* Managers */,
+				BBD75074210DC8B400D35A42 /* Utility */,
 				BBD75072210DC87800D35A42 /* Application */,
 				BBD75073210DC89200D35A42 /* UI */,
 				BBD75070210DC7C600D35A42 /* Classes */,
@@ -181,7 +207,6 @@
 				BBD75075210DC8EE00D35A42 /* Storyboards */,
 				BBD75071210DC7E900D35A42 /* Views */,
 				BBD7506F210DC6E800D35A42 /* Controllers */,
-				BBD75074210DC8B400D35A42 /* Utility */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -320,6 +345,7 @@
 				BBD75066210CC18400D35A42 /* GameViewController.m in Sources */,
 				BBD7502F210B795D00D35A42 /* StartViewController.m in Sources */,
 				BBD75056210C43FF00D35A42 /* AppState.m in Sources */,
+				BB4AC781210E5C11005C3934 /* BoardImagesManager.m in Sources */,
 				BBD7503A210B795F00D35A42 /* main.m in Sources */,
 				BBD75053210C438700D35A42 /* GameBoard.m in Sources */,
 				BBD7506C210DC1DF00D35A42 /* UIButton+BoardCell.m in Sources */,

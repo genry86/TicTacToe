@@ -17,7 +17,6 @@
  */
 + (ShareApiUtility *)sharedInstance;
 
-
 /**
  * `sendMessage:inController` sharing data
  * @param message

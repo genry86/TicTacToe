@@ -17,4 +17,5 @@
  */
 - (CGPoint)getCellCoords;
 
+- (void)setImageBySymbol:(NSString *)symbol;
 @end

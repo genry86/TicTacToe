@@ -20,10 +20,7 @@
 
 @implementation GameViewController
 
-- (BOOL)shouldAutorotate
-{
-    return YES;
-}
+#pragma mark - View lifecycle
 
 - (void)viewDidLoad{
     [super viewDidLoad];
@@ -36,6 +33,11 @@
     self.turnLabel.text = [NSString stringWithFormat:@"%@'s turn", AppState.sharedInstance.currentSymbol];
 }
 
+- (BOOL)shouldAutorotate
+{
+    return YES;
+}
+
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskAll;
@@ -46,7 +48,7 @@
     if (sender.imageView.image) {
         return;
     }
-    [self setMarkForButton:sender];
+    [sender setImageBySymbol:AppState.sharedInstance.currentSymbol];
 
     WinLine *winLine;
     NSString *currentSymbol = [GameBoard.sharedInstance tapOnRow:sender.getCellCoords.y
@@ -89,11 +91,6 @@
     }
 }
 
-- (void)setMarkForButton:(UIButton *)button
-{
-    [button setImage:[UIImage imageNamed:AppState.sharedInstance.currentSymbol] forState:UIControlStateNormal];
-}
-
 - (void)presentAlertWithMessage:(NSString *)message
 {
     __weak typeof(self) weakSelf = self;
@@ -134,7 +131,7 @@
               UIButton *buttonCell = [self.view viewWithTag:tag];
               
               if (buttonCell && [buttonCell isKindOfClass:UIButton.class] && ![symbol isEqualToString:@"_"]) {
-                  [buttonCell setImage:[UIImage imageNamed:symbol] forState:UIControlStateNormal];
+                  [buttonCell setImageBySymbol:symbol];
               }
           }];
      }];

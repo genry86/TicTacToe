@@ -19,4 +19,9 @@
     return CGPointMake(col, row);
 }
 
+- (void)setImageBySymbol:(NSString *)symbol
+{
+    UIImage *image = [BoardImagesManager.sharedInstance.marks[symbol] copy];
+    [self setImage:image forState:UIControlStateNormal];
+}
 @end
