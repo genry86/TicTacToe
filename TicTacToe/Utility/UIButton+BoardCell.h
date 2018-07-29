@@ -17,5 +17,10 @@
  */
 - (CGPoint)getCellCoords;
 
+/**
+ * `setImageBySymbol:` setting image cell
+ * @param symbol
+ * symbol based on which image cell would be installed
+ */
 - (void)setImageBySymbol:(NSString *)symbol;
 @end

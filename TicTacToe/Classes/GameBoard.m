@@ -21,6 +21,9 @@
     return instance;
 }
 
+#pragma mark - Public
+#pragma mark -
+
 - (NSString *)tapOnRow:(NSUInteger)row andColumn:(NSUInteger)column winLine:(WinLine **)winLine
 {
     NSString *currentSymbol = AppState.sharedInstance.currentSymbol;
@@ -34,6 +37,27 @@
     AppState.sharedInstance.currentSymbol = [currentSymbol isEqualToString:kBoardXCell] ? kBoardOCell : kBoardXCell;
     return AppState.sharedInstance.currentSymbol;
 }
+
+- (BOOL)checkAbilityToTap
+{
+    NSArray *board = AppState.sharedInstance.board;
+    
+    __block BOOL ableToTap = NO;
+    [board enumerateObjectsUsingBlock:^(NSMutableArray<NSString *> *row, NSUInteger idx, BOOL *stop)
+     {
+         [row enumerateObjectsUsingBlock:^(NSString *symbol, NSUInteger idx, BOOL *stop)
+          {
+              if ([symbol isEqualToString:kBoardEmptyCell]) {
+                  *stop = ableToTap = YES;
+              }
+          }];
+     }];
+    
+    return ableToTap;
+}
+
+#pragma mark - Private
+#pragma mark -
 
 - (WinLine *)checkWinLine
 {
@@ -99,25 +123,6 @@
         return [WinLine.alloc initWithFirstPoint:CGPointMake(kBoardLimit - 1, 0) andSecondPoint:CGPointMake(0, kBoardLimit - 1)];
     }
     return nil;
-}
-
-
-- (BOOL)checkAbilityToTap
-{
-    NSArray *board = AppState.sharedInstance.board;
-    
-    __block BOOL ableToTap = NO;
-    [board enumerateObjectsUsingBlock:^(NSMutableArray<NSString *> *row, NSUInteger idx, BOOL *stop)
-    {
-        [row enumerateObjectsUsingBlock:^(NSString *symbol, NSUInteger idx, BOOL *stop)
-        {
-            if ([symbol isEqualToString:kBoardEmptyCell]) {
-                *stop = ableToTap = YES;
-            }
-        }];
-    }];
-    
-    return ableToTap;
 }
 
 @end

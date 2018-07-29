@@ -20,6 +20,9 @@
     return instance;
 }
 
+#pragma mark - Public
+#pragma mark -
+
 - (NSMutableDictionary *)marks
 {
     if (!_marks) {
@@ -49,6 +52,9 @@
                                       });
                    });
 }
+
+#pragma mark - Private
+#pragma mark -
 
 - (UIImage *)downloadImageByURL:(NSString *)fileURL
 {

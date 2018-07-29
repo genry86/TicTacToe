@@ -24,5 +24,7 @@ typedef void(^CompletionBlock)(void);
 extern NSString *const kXImageUrl;
 extern NSString *const kOImageUrl;
 
+extern NSString *const kGoNextSegue;
+
 @interface Constants : NSObject
 @end

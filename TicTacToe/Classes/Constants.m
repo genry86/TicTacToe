@@ -17,6 +17,8 @@ NSInteger const kBoardLimit = 3;
 NSString *const kXImageUrl = @"http://d.michd.me/aa-lab/x_mark.png";
 NSString *const kOImageUrl = @"http://d.michd.me/aa-lab/o_mark.png";
 
+NSString *const kGoNextSegue = @"StartAsXSegue";
+
 @implementation Constants
 
 @end

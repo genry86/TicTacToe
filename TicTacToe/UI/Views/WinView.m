@@ -17,6 +17,9 @@
 
 @implementation WinView
 
+#pragma mark - View lifecycle
+#pragma mark - 
+
 - (id)initWithCoder:(NSCoder*)aDecoder
 {
     self = [super initWithCoder:aDecoder];
@@ -24,12 +27,6 @@
         self.backgroundColor = UIColor.clearColor;
     }
     return self;
-}
-
-- (void)drawLine:(WinLine *)winLine
-{
-    self.winLine = winLine;
-    [self setNeedsDisplay];
 }
 
 - (void)drawRect:(CGRect)rect
@@ -60,5 +57,13 @@
     CGContextStrokePath(context);
 }
 
+#pragma mark - Public
+#pragma mark -
+
+- (void)drawLine:(WinLine *)winLine
+{
+    self.winLine = winLine;
+    [self setNeedsDisplay];
+}
 
 @end

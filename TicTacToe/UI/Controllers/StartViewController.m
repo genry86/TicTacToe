@@ -16,7 +16,8 @@
 
 @implementation StartViewController
 
-#pragma mark - View lifecycle
+#pragma mark - View Controller lifecycle
+#pragma mark -
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -40,6 +41,9 @@
         AppState.sharedInstance.currentSymbol = [sender tag] ? kBoardXCell : kBoardOCell;   // 1 - X, 0 - O
     }
 }
+
+#pragma mark - Public
+#pragma mark -
 
 - (void)enableUI
 {

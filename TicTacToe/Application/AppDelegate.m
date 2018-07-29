@@ -15,7 +15,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     __weak typeof(self) weakSelf = self;
-    
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     StartViewController *startViewController = (StartViewController *)navigationController.visibleViewController;
     
@@ -23,7 +22,7 @@
      ^{
          [startViewController enableUI];
          if (AppState.restoreState) {
-             [startViewController performSegueWithIdentifier:@"StartAsXSegue" sender:weakSelf];
+             [startViewController performSegueWithIdentifier:kGoNextSegue sender:weakSelf];
          }
      }];
     

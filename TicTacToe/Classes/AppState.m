@@ -20,6 +20,9 @@
     return instance;
 }
 
+#pragma mark - View lifecycle
+#pragma mark -
+
 - (instancetype)init
 {
     self = [super init];
@@ -28,6 +31,27 @@
     }
     return self;
 }
+
+#pragma mark - NSCoding
+#pragma mark -
+
+- (id)initWithCoder:(NSCoder *)decoder
+{
+    if (self = [super init]) {
+        self.currentSymbol = [decoder decodeObjectForKey:@"currentSymbol"];
+        self.board         = [decoder decodeObjectForKey:@"board"];
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)encoder
+{
+    [encoder encodeObject:self.currentSymbol forKey:@"currentSymbol"];
+    [encoder encodeObject:self.board         forKey:@"board"];
+}
+
+#pragma mark - Public
+#pragma mark -
 
 + (BOOL)saveState
 {
@@ -63,21 +87,6 @@
     NSError *err;
     [[NSFileManager defaultManager] removeItemAtPath:appFile error:&err];
     return YES;
-}
-
-- (id)initWithCoder:(NSCoder *)decoder
-{
-    if (self = [super init]) {
-        self.currentSymbol = [decoder decodeObjectForKey:@"currentSymbol"];
-        self.board         = [decoder decodeObjectForKey:@"board"];
-    }
-    return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)encoder
-{
-    [encoder encodeObject:self.currentSymbol forKey:@"currentSymbol"];
-    [encoder encodeObject:self.board         forKey:@"board"];
 }
 
 - (void)reset

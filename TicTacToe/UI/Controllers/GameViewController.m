@@ -21,6 +21,7 @@
 @implementation GameViewController
 
 #pragma mark - View lifecycle
+#pragma mark -
 
 - (void)viewDidLoad{
     [super viewDidLoad];
@@ -42,6 +43,9 @@
 {
     return UIInterfaceOrientationMaskAll;
 }
+
+#pragma mark - Private
+#pragma mark -
 
 - (IBAction)tapCell:(UIButton *)sender
 {
