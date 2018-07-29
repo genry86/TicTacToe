@@ -91,12 +91,15 @@
                             <view opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="300" verticalHuggingPriority="300" translatesAutoresizingMaskIntoConstraints="NO" id="guo-Ox-dF2">
                                 <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
                                 <subviews>
-                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhd-UB-0D1" userLabel="LeftTop">
+                                    <button tag="11" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhd-UB-0D1" userLabel="LeftTop">
                                         <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="mhd-UB-0D1" secondAttribute="height" multiplier="1:1" id="WIr-TC-QGT"/>
                                         </constraints>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="tapCell:" destination="BNK-4L-Mpd" eventType="touchUpInside" id="uPy-yx-w4w"/>
                                         </connections>
@@ -104,6 +107,9 @@
                                     <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yk-qz-ATr" userLabel="LeftBottom">
                                         <rect key="frame" x="0.0" y="204.5" width="96" height="96"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="tapCell:" destination="BNK-4L-Mpd" eventType="touchUpInside" id="1kz-2C-3gq"/>
                                         </connections>
@@ -146,7 +152,7 @@
                                             <action selector="tapCell:" destination="BNK-4L-Mpd" eventType="touchUpInside" id="oRj-y6-Wnh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaS-Td-cdB" userLabel="RightMiddle">
+                                    <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaS-Td-cdB" userLabel="RightMiddle">
                                         <rect key="frame" x="204.5" y="103" width="96" height="94.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>

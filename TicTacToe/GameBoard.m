@@ -21,20 +21,22 @@
     return instance;
 }
 
-- (void)tapOnRow:(NSUInteger)row andColumn:(NSUInteger)column winLine:(WinLine **)winLine
+- (NSString *)tapOnRow:(NSUInteger)row andColumn:(NSUInteger)column winLine:(WinLine **)winLine
 {
     AppState.sharedInstance.board[row - 1][column - 1] = AppState.sharedInstance.currentSymbol;
     
     *winLine = [GameBoard.sharedInstance checkWinLine];
     if (*winLine) {
-        return;
+        return nil;
     }
     
     if (![self checkAbilityToTap]) {
-        return;
+        return nil;
     }
     
     AppState.sharedInstance.currentSymbol = [AppState.sharedInstance.currentSymbol isEqualToString:kBoardXCell] ? kBoardOCell : kBoardXCell;
+    
+    return AppState.sharedInstance.currentSymbol;
 }
 
 - (WinLine *)checkWinLine

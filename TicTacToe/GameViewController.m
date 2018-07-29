@@ -40,22 +40,48 @@
 
 - (IBAction)tapCell:(UIButton *)sender
 {
+    if (sender.imageView.image) {
+        return;
+    }
+    [sender setImage:[UIImage imageNamed:AppState.sharedInstance.currentSymbol] forState:UIControlStateNormal];
+    
     NSString *cellIndexes = @(sender.tag).stringValue;
-    NSInteger row = [cellIndexes substringFromIndex:0].integerValue;
-    NSInteger col = [cellIndexes substringFromIndex:1].integerValue;
+    NSInteger row = [cellIndexes substringWithRange:NSMakeRange(0, 1)].integerValue;
+    NSInteger col = [cellIndexes substringWithRange:NSMakeRange(1, 1)].integerValue;
     
     WinLine *winLine;
-    [GameBoard.sharedInstance tapOnRow:row andColumn:col winLine:&winLine];
+    NSString *currentSymbol = [GameBoard.sharedInstance tapOnRow:row andColumn:col winLine:&winLine];
     
     if (!winLine && GameBoard.sharedInstance.checkAbilityToTap) {
-        self.turnLabel.text = [NSString stringWithFormat:@"%@'s turn", AppState.sharedInstance.currentSymbol];
+        self.turnLabel.text = [NSString stringWithFormat:@"%@'s turn", currentSymbol];
     }
     else if (!winLine && !GameBoard.sharedInstance.checkAbilityToTap) {
-        
+        [self presentAlertWithMessage:@"A drow"];
     }
     else {
         [self.winView drawLine:winLine];
+        [self presentAlertWithMessage:[NSString stringWithFormat:@"%@ wins", currentSymbol]];
     }
+}
+
+- (void)presentAlertWithMessage:(NSString *)message
+{
+    __weak typeof(self) weakSelf = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4.0f * NSEC_PER_SEC)),
+                   dispatch_get_main_queue(),
+    ^{
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil
+                                                                                 message:message
+                                                                          preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Ok"
+                                                            style:UIAlertActionStyleDestructive
+                                                          handler:^(UIAlertAction *action)
+                                    {
+                                        [weakSelf.navigationController popToRootViewControllerAnimated:YES];
+                                    }]];
+        
+        [weakSelf presentViewController:alertController animated:YES completion:nil];
+    });
 }
 
 @end
