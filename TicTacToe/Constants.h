@@ -14,5 +14,12 @@ extern NSString *const kBoardEmptyCell;
 
 extern NSInteger const kBoardLimit;
 
+typedef NS_ENUM(NSUInteger, StepStatus)
+{
+   StepStatusNextTurn = 0,
+   StepStatusNoEmptyCells,
+   StepStatusWin
+};
+
 @interface Constants : NSObject
 @end

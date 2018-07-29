@@ -21,6 +21,7 @@
 		BBD75060210C89CD00D35A42 /* GameBoardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD7505F210C89CD00D35A42 /* GameBoardTests.m */; };
 		BBD75066210CC18400D35A42 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD75065210CC18400D35A42 /* GameViewController.m */; };
 		BBD75069210D0C2700D35A42 /* WinView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD75068210D0C2700D35A42 /* WinView.m */; };
+		BBD7506C210DC1DF00D35A42 /* UIButton+BoardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD7506B210DC1DF00D35A42 /* UIButton+BoardCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		BBD75065210CC18400D35A42 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		BBD75067210D0C2700D35A42 /* WinView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WinView.h; sourceTree = "<group>"; };
 		BBD75068210D0C2700D35A42 /* WinView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WinView.m; sourceTree = "<group>"; };
+		BBD7506A210DC1DF00D35A42 /* UIButton+BoardCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+BoardCell.h"; sourceTree = "<group>"; };
+		BBD7506B210DC1DF00D35A42 /* UIButton+BoardCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BoardCell.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				BBD75065210CC18400D35A42 /* GameViewController.m */,
 				BBD75067210D0C2700D35A42 /* WinView.h */,
 				BBD75068210D0C2700D35A42 /* WinView.m */,
+				BBD7506A210DC1DF00D35A42 /* UIButton+BoardCell.h */,
+				BBD7506B210DC1DF00D35A42 /* UIButton+BoardCell.m */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 				BBD75056210C43FF00D35A42 /* AppState.m in Sources */,
 				BBD7503A210B795F00D35A42 /* main.m in Sources */,
 				BBD75053210C438700D35A42 /* GameBoard.m in Sources */,
+				BBD7506C210DC1DF00D35A42 /* UIButton+BoardCell.m in Sources */,
 				BBD75050210C433800D35A42 /* WinLine.m in Sources */,
 				BBD7505C210C616900D35A42 /* Constants.m in Sources */,
 				BBD7502C210B795D00D35A42 /* AppDelegate.m in Sources */,

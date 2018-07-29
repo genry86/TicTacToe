@@ -9,6 +9,7 @@
 #import "GameViewController.h"
 #import "WinView.h"
 #import "WinLine.h"
+#import "UIButton+BoardCell.h"
 
 @interface GameViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *turnLabel;
@@ -17,11 +18,6 @@
 @end
 
 @implementation GameViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
 
 - (BOOL)shouldAutorotate
 {
@@ -44,25 +40,52 @@
     if (sender.imageView.image) {
         return;
     }
-    [sender setImage:[UIImage imageNamed:AppState.sharedInstance.currentSymbol] forState:UIControlStateNormal];
-    
-    NSString *cellIndexes = @(sender.tag).stringValue;
-    NSInteger row = [cellIndexes substringWithRange:NSMakeRange(0, 1)].integerValue;
-    NSInteger col = [cellIndexes substringWithRange:NSMakeRange(1, 1)].integerValue;
-    
+    [self setMarkForButton:sender];
+
     WinLine *winLine;
-    NSString *currentSymbol = [GameBoard.sharedInstance tapOnRow:row andColumn:col winLine:&winLine];
+    NSString *currentSymbol = [GameBoard.sharedInstance tapOnRow:sender.getCellCoords.y
+                                                       andColumn:sender.getCellCoords.x
+                                                         winLine:&winLine];
     
+    switch ([self getStatus:winLine])
+    {
+        case StepStatusNextTurn:
+        {
+            self.turnLabel.text = [NSString stringWithFormat:@"%@'s turn", currentSymbol];
+        }
+            break;
+            
+        case StepStatusNoEmptyCells:
+        {
+            [self presentAlertWithMessage:@"A drow"];
+        }
+            break;
+            
+        case StepStatusWin:
+        {
+            [self.winView drawLine:winLine];
+            [self presentAlertWithMessage:[NSString stringWithFormat:@"%@ wins", currentSymbol]];
+        }
+            break;
+    }
+}
+
+- (StepStatus)getStatus:(WinLine *)winLine
+{
     if (!winLine && GameBoard.sharedInstance.checkAbilityToTap) {
-        self.turnLabel.text = [NSString stringWithFormat:@"%@'s turn", currentSymbol];
+        return StepStatusNextTurn;
     }
     else if (!winLine && !GameBoard.sharedInstance.checkAbilityToTap) {
-        [self presentAlertWithMessage:@"A drow"];
+        return StepStatusNoEmptyCells;
     }
     else {
-        [self.winView drawLine:winLine];
-        [self presentAlertWithMessage:[NSString stringWithFormat:@"%@ wins", currentSymbol]];
+        return StepStatusWin;
     }
+}
+
+- (void)setMarkForButton:(UIButton *)button
+{
+    [button setImage:[UIImage imageNamed:AppState.sharedInstance.currentSymbol] forState:UIControlStateNormal];
 }
 
 - (void)presentAlertWithMessage:(NSString *)message
