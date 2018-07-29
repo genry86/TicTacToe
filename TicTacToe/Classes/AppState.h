@@ -23,7 +23,12 @@
 /**
   restoring board data and current symbol from previously saved state
  */
-+ (AppState *)restoreState;
++ (BOOL)restoreState;
+
+/**
+  remove state if game finished
+ */
++ (BOOL)removeState;
 
 /**
   current mark, 'O' or 'X'

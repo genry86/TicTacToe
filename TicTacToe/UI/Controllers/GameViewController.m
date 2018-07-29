@@ -24,6 +24,23 @@
     return YES;
 }
 
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    
+    [AppState.sharedInstance.board enumerateObjectsUsingBlock:^(NSMutableArray<NSString *> *row, NSUInteger rowIndex, BOOL *stop)
+    {
+        [row enumerateObjectsUsingBlock:^(NSString *symbol, NSUInteger columnIndex, BOOL *stop)
+        {
+            NSInteger tag = [NSString stringWithFormat:@"%lu%lu", (unsigned long)rowIndex + 1, (unsigned long)columnIndex + 1].integerValue;
+            UIButton *buttonCell = [self.view viewWithTag:tag];
+            
+            if (buttonCell && [buttonCell isKindOfClass:UIButton.class] && ![symbol isEqualToString:@"_"]) {
+                [buttonCell setImage:[UIImage imageNamed:symbol] forState:UIControlStateNormal];
+            }
+        }];
+    }];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -102,6 +119,7 @@
                                                           handler:^(UIAlertAction *action)
                                     {
                                         [AppState.sharedInstance reset];
+                                        [AppState removeState];
                                         [weakSelf.navigationController popToRootViewControllerAnimated:YES];
                                     }]];
         

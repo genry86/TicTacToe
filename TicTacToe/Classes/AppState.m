@@ -38,17 +38,31 @@
     return [NSKeyedArchiver archiveRootObject:AppState.sharedInstance toFile:appFile];
 }
 
-+ (AppState *)restoreState
++ (BOOL)restoreState
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = paths[0];
     NSString *appFile = [documentsDirectory stringByAppendingPathComponent:NSStringFromClass(AppState.class)];
     
     AppState *restorredState = [NSKeyedUnarchiver unarchiveObjectWithFile:appFile];
-    AppState.sharedInstance.board = restorredState.board;
-    AppState.sharedInstance.currentSymbol = restorredState.currentSymbol;
+    if (restorredState && restorredState.board && restorredState.currentSymbol) {
+        AppState.sharedInstance.board = restorredState.board;
+        AppState.sharedInstance.currentSymbol = restorredState.currentSymbol;
+        return YES;
+    }
     
-    return restorredState;
+    return NO;
+}
+
++ (BOOL)removeState
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = paths[0];
+    NSString *appFile = [documentsDirectory stringByAppendingPathComponent:NSStringFromClass(AppState.class)];
+    
+    NSError *err;
+    [[NSFileManager defaultManager] removeItemAtPath:appFile error:&err];
+    return YES;
 }
 
 - (id)initWithCoder:(NSCoder *)decoder
@@ -73,6 +87,8 @@
                    @[ @"_", @"_", @"_"].mutableCopy,
                    @[ @"_", @"_", @"_"].mutableCopy
                    ];
+    
+    self.currentSymbol = nil;
 }
 
 

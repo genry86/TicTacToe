@@ -28,6 +28,8 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    AppState.sharedInstance.currentSymbol = [segue.identifier isEqualToString:@"StartAsXSegue"] ? kBoardXCell : kBoardOCell;
+    if ([sender isKindOfClass:UIButton.class]) {
+        AppState.sharedInstance.currentSymbol = [sender tag] ? kBoardXCell : kBoardOCell;   // 1 - X, 0 - O
+    }
 }
 @end
