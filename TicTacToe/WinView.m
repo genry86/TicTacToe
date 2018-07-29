@@ -40,18 +40,19 @@
         return;
     }
     
-    int unit = rect.size.width / 6;    // middle of one cell
+    int halfCellSize = rect.size.width / 6;    // middle of one cell
+    int cellSize = rect.size.width / 3;    // middle of one cell
     
-    double startX = self.winLine.col1.intValue * unit;
-    double startY = self.winLine.row1.intValue * unit;
+    double startX = (self.winLine.col1.intValue - 1) * cellSize + halfCellSize;
+    double startY = (self.winLine.row1.intValue - 1) * cellSize + halfCellSize;
     
-    double endX = self.winLine.col2.intValue * unit;
-    double endY = self.winLine.row2.intValue * unit;
+    double endX = (self.winLine.col2.intValue - 1) * cellSize + halfCellSize;
+    double endY = (self.winLine.row2.intValue - 1) * cellSize + halfCellSize;
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
     
-    CGContextSetLineWidth(context, 2.0f);
+    CGContextSetLineWidth(context, 5.0f);
     
     CGContextMoveToPoint(context, startX, startY); //start at this point
     CGContextAddLineToPoint(context, endX, endY); //draw to this point

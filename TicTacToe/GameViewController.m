@@ -78,6 +78,7 @@
                                                             style:UIAlertActionStyleDestructive
                                                           handler:^(UIAlertAction *action)
                                     {
+                                        [AppState.sharedInstance reset];
                                         [weakSelf.navigationController popToRootViewControllerAnimated:YES];
                                     }]];
         
