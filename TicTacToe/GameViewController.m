@@ -8,6 +8,7 @@
 
 #import "GameViewController.h"
 #import "WinView.h"
+#import "WinLine.h"
 
 @interface GameViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *turnLabel;
@@ -39,58 +40,22 @@
 
 - (IBAction)tapCell:(UIButton *)sender
 {
-    switch (sender.tag)
-    {
-        case TTCellPosLeftTop:
-        {
-            
-        }
-            break;
-        case TTCellPosMiddleTop:
-        {
-            
-        }
-            break;
-        case TTCellPosRightTop:
-        {
-            
-        }
-            break;
-            
-        case TTCellPosLeftMiddle:
-        {
-            
-        }
-            break;
-        case TTCellPosCenter:
-        {
-            
-        }
-            break;
-        case TTCellPosRightMiddle:
-        {
-            
-        }
-            break;
-        
-        case TTCellPosLeftBottom:
-        {
-            
-        }
-            break;
-        case TTCellPosMiddleBottom:
-        {
-            
-        }
-            break;
-        case TTCellPosRightBottom:
-        {
-            
-        }
-            break;
-    }
+    NSString *cellIndexes = @(sender.tag).stringValue;
+    NSInteger row = [cellIndexes substringFromIndex:0].integerValue;
+    NSInteger col = [cellIndexes substringFromIndex:1].integerValue;
     
-    self.turnLabel.text = [NSString stringWithFormat:@"%@'s turn", AppState.sharedInstance.currentSymbol];
+    WinLine *winLine;
+    [GameBoard.sharedInstance tapOnRow:row andColumn:col winLine:&winLine];
+    
+    if (!winLine && GameBoard.sharedInstance.checkAbilityToTap) {
+        self.turnLabel.text = [NSString stringWithFormat:@"%@'s turn", AppState.sharedInstance.currentSymbol];
+    }
+    else if (!winLine && !GameBoard.sharedInstance.checkAbilityToTap) {
+        
+    }
+    else {
+        [self.winView drawLine:winLine];
+    }
 }
 
 @end
