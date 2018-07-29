@@ -23,19 +23,15 @@
 
 - (NSString *)tapOnRow:(NSUInteger)row andColumn:(NSUInteger)column winLine:(WinLine **)winLine
 {
-    AppState.sharedInstance.board[row - 1][column - 1] = AppState.sharedInstance.currentSymbol;
+    NSString *currentSymbol = AppState.sharedInstance.currentSymbol;
+    AppState.sharedInstance.board[row - 1][column - 1] = currentSymbol;
     
     *winLine = [GameBoard.sharedInstance checkWinLine];
-    if (*winLine) {
-        return nil;
+    if (*winLine || ![self checkAbilityToTap]) {
+        return currentSymbol;
     }
     
-    if (![self checkAbilityToTap]) {
-        return nil;
-    }
-    
-    AppState.sharedInstance.currentSymbol = [AppState.sharedInstance.currentSymbol isEqualToString:kBoardXCell] ? kBoardOCell : kBoardXCell;
-    
+    AppState.sharedInstance.currentSymbol = [currentSymbol isEqualToString:kBoardXCell] ? kBoardOCell : kBoardXCell;
     return AppState.sharedInstance.currentSymbol;
 }
 
