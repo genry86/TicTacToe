@@ -22,6 +22,7 @@
 		BBD75066210CC18400D35A42 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD75065210CC18400D35A42 /* GameViewController.m */; };
 		BBD75069210D0C2700D35A42 /* WinView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD75068210D0C2700D35A42 /* WinView.m */; };
 		BBD7506C210DC1DF00D35A42 /* UIButton+BoardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD7506B210DC1DF00D35A42 /* UIButton+BoardCell.m */; };
+		BBD7506E210DC5E300D35A42 /* UIButtonsUtilityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD7506D210DC5E300D35A42 /* UIButtonsUtilityTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		BBD75068210D0C2700D35A42 /* WinView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WinView.m; sourceTree = "<group>"; };
 		BBD7506A210DC1DF00D35A42 /* UIButton+BoardCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+BoardCell.h"; sourceTree = "<group>"; };
 		BBD7506B210DC1DF00D35A42 /* UIButton+BoardCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BoardCell.m"; sourceTree = "<group>"; };
+		BBD7506D210DC5E300D35A42 /* UIButtonsUtilityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIButtonsUtilityTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				BBD75045210B796000D35A42 /* Info.plist */,
 				BBD7505D210C7A0700D35A42 /* AppStateTests.m */,
 				BBD7505F210C89CD00D35A42 /* GameBoardTests.m */,
+				BBD7506D210DC5E300D35A42 /* UIButtonsUtilityTests.m */,
 			);
 			path = TicTacToeTests;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBD7506E210DC5E300D35A42 /* UIButtonsUtilityTests.m in Sources */,
 				BBD7505E210C7A0700D35A42 /* AppStateTests.m in Sources */,
 				BBD75060210C89CD00D35A42 /* GameBoardTests.m in Sources */,
 			);
