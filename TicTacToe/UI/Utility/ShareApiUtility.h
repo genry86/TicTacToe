@@ -13,12 +13,18 @@
 @interface ShareApiUtility : NSObject
 
 /**
+ geting singleton, for convenient work with board
+ */
++ (ShareApiUtility *)sharedInstance;
+
+
+/**
  * `sendMessage:inController` sharing data
  * @param message
  * string message wwhich would be shared
  * @param sourceController
  * controller from which activity sheet would be opened
  */
-+ (void)sendMessage:(NSString *)message inController:(UIViewController *)sourceController;
+- (void)sendMessage:(NSString *)message inController:(UIViewController *)sourceController;
 
 @end

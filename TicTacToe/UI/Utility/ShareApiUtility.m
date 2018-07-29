@@ -10,7 +10,17 @@
 
 @implementation ShareApiUtility
 
-+ (void)sendMessage:(NSString *)message inController:(UIViewController *)sourceController
++ (ShareApiUtility *)sharedInstance
+{
+    static GameBoard *instance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [[GameBoard alloc] init];
+    });
+    return instance;
+}
+
+- (void)sendMessage:(NSString *)message inController:(UIViewController *)sourceController
 {
     UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:@[message]
                                                                                      applicationActivities:nil];

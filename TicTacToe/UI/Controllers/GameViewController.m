@@ -116,7 +116,7 @@
                                                             style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction *action)
                                     {
-                                        [ShareApiUtility sendMessage:message inController:weakSelf];
+                                        [ShareApiUtility.sharedInstance sendMessage:message inController:weakSelf];
                                     }]];
         
         
