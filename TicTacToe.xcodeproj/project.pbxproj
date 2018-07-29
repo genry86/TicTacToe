@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB4AC774210E0E9E005C3934 /* ShareApiUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = BB4AC773210E0E9E005C3934 /* ShareApiUtility.m */; };
 		BBD7502C210B795D00D35A42 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD7502B210B795D00D35A42 /* AppDelegate.m */; };
 		BBD7502F210B795D00D35A42 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBD7502E210B795D00D35A42 /* StartViewController.m */; };
 		BBD75032210B795D00D35A42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBD75030210B795D00D35A42 /* Main.storyboard */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB4AC772210E0E9E005C3934 /* ShareApiUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareApiUtility.h; sourceTree = "<group>"; };
+		BB4AC773210E0E9E005C3934 /* ShareApiUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareApiUtility.m; sourceTree = "<group>"; };
 		BBD75027210B795D00D35A42 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD7502A210B795D00D35A42 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BBD7502B210B795D00D35A42 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -188,6 +191,8 @@
 			children = (
 				BBD7506A210DC1DF00D35A42 /* UIButton+BoardCell.h */,
 				BBD7506B210DC1DF00D35A42 /* UIButton+BoardCell.m */,
+				BB4AC772210E0E9E005C3934 /* ShareApiUtility.h */,
+				BB4AC773210E0E9E005C3934 /* ShareApiUtility.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB4AC774210E0E9E005C3934 /* ShareApiUtility.m in Sources */,
 				BBD75069210D0C2700D35A42 /* WinView.m in Sources */,
 				BBD75066210CC18400D35A42 /* GameViewController.m in Sources */,
 				BBD7502F210B795D00D35A42 /* StartViewController.m in Sources */,

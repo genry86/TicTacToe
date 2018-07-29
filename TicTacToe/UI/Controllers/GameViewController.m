@@ -10,6 +10,7 @@
 #import "WinView.h"
 #import "WinLine.h"
 #import "UIButton+BoardCell.h"
+#import "ShareApiUtility.h"
 
 @interface GameViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *turnLabel;
@@ -111,10 +112,17 @@
                                         [weakSelf.navigationController popToRootViewControllerAnimated:YES];
                                     }]];
         
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Share"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction *action)
+                                    {
+                                        [ShareApiUtility sendMessage:message inController:weakSelf];
+                                    }]];
+        
+        
         [weakSelf presentViewController:alertController animated:YES completion:nil];
     });
 }
-
 
 - (void)loadStateAndFillBoard
 {
@@ -131,5 +139,4 @@
           }];
      }];
 }
-
 @end
