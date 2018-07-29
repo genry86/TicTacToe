@@ -1,18 +1,14 @@
 //
-//  ViewController.m
+//  StartViewController.m
 //  TicTacToe
 //
 //  Created by Genry on 7/27/18.
 //  Copyright © 2018 Genry. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "StartViewController.h"
 
-@interface ViewController ()
-
-@end
-
-@implementation ViewController
+@implementation StartViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
