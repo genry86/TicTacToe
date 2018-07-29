@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "StartViewController.h"
+@import GoogleMobileAds;
 
 @implementation AppDelegate
 
@@ -25,6 +26,9 @@
              [startViewController performSegueWithIdentifier:kGoNextSegue sender:weakSelf];
          }
      }];
+    
+    // Initialize Google Mobile Ads SDK
+    [GADMobileAds configureWithApplicationID:@"ca-app-pub-3940256099942544~1458002511"];
     
     return YES;
 }
