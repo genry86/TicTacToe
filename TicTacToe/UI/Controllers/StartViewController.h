@@ -6,10 +6,10 @@
 //  Copyright © 2018 Genry. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+/**
+ `StartViewController` UIViewController with two buttons to select first mark and initiate game.
+ */
 
 @interface StartViewController : UIViewController
-
-
 @end
 

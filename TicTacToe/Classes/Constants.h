@@ -6,8 +6,6 @@
 //  Copyright © 2018 Genry. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 extern NSString *const kBoardXCell;
 extern NSString *const kBoardOCell;
 extern NSString *const kBoardEmptyCell;

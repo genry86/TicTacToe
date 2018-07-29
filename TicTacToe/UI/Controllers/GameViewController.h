@@ -6,8 +6,9 @@
 //  Copyright © 2018 Genry. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+/**
+ `GameViewController` UIViewController for main game board and play. 
+ */
 
 @interface GameViewController : UIViewController
-
 @end

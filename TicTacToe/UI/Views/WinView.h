@@ -6,11 +6,19 @@
 //  Copyright © 2018 Genry. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 @class WinLine;
+
+/**
+ `WinView` UIView class for drawing crossed line if someone win
+ */
 
 @interface WinView : UIView
 
+/**
+ * `drawLine:winLine` drawing cross line on three cells
+ * @param winLine
+ * crossed line objects with coords
+ */
 - (void)drawLine:(WinLine *)winLine;
 
 @end

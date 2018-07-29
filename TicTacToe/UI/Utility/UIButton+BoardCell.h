@@ -6,10 +6,15 @@
 //  Copyright © 2018 Genry. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+/**
+ `BoardCell` category adding utility method of fetching table-coords from pressed button
+ */
 
 @interface UIButton (BoardCell)
 
+/**
+  fetching CGPoint struct with pressed cell-coords
+ */
 - (CGPoint)getCellCoords;
 
 @end
