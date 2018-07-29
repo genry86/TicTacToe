@@ -107,30 +107,10 @@
 		BBD75029210B795D00D35A42 /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
-				BBD7502A210B795D00D35A42 /* AppDelegate.h */,
-				BBD7502B210B795D00D35A42 /* AppDelegate.m */,
-				BBD7502D210B795D00D35A42 /* StartViewController.h */,
-				BBD7502E210B795D00D35A42 /* StartViewController.m */,
-				BBD75030210B795D00D35A42 /* Main.storyboard */,
-				BBD75033210B795F00D35A42 /* Assets.xcassets */,
-				BBD75035210B795F00D35A42 /* LaunchScreen.storyboard */,
-				BBD75038210B795F00D35A42 /* Info.plist */,
-				BBD75039210B795F00D35A42 /* main.m */,
-				BBD7504E210C433800D35A42 /* WinLine.h */,
-				BBD7504F210C433800D35A42 /* WinLine.m */,
-				BBD75051210C438700D35A42 /* GameBoard.h */,
-				BBD75052210C438700D35A42 /* GameBoard.m */,
-				BBD75054210C43FF00D35A42 /* AppState.h */,
-				BBD75055210C43FF00D35A42 /* AppState.m */,
-				BBD75059210C49C300D35A42 /* TicTacToeHeaderPrefix.pch */,
-				BBD7505A210C616900D35A42 /* Constants.h */,
-				BBD7505B210C616900D35A42 /* Constants.m */,
-				BBD75064210CC18400D35A42 /* GameViewController.h */,
-				BBD75065210CC18400D35A42 /* GameViewController.m */,
-				BBD75067210D0C2700D35A42 /* WinView.h */,
-				BBD75068210D0C2700D35A42 /* WinView.m */,
-				BBD7506A210DC1DF00D35A42 /* UIButton+BoardCell.h */,
-				BBD7506B210DC1DF00D35A42 /* UIButton+BoardCell.m */,
+				BBD75072210DC87800D35A42 /* Application */,
+				BBD75073210DC89200D35A42 /* UI */,
+				BBD75070210DC7C600D35A42 /* Classes */,
+				BBD75076210DC93B00D35A42 /* Configuration */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -144,6 +124,90 @@
 				BBD7506D210DC5E300D35A42 /* UIButtonsUtilityTests.m */,
 			);
 			path = TicTacToeTests;
+			sourceTree = "<group>";
+		};
+		BBD7506F210DC6E800D35A42 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BBD7502D210B795D00D35A42 /* StartViewController.h */,
+				BBD7502E210B795D00D35A42 /* StartViewController.m */,
+				BBD75064210CC18400D35A42 /* GameViewController.h */,
+				BBD75065210CC18400D35A42 /* GameViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BBD75070210DC7C600D35A42 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BBD7504E210C433800D35A42 /* WinLine.h */,
+				BBD7504F210C433800D35A42 /* WinLine.m */,
+				BBD75051210C438700D35A42 /* GameBoard.h */,
+				BBD75052210C438700D35A42 /* GameBoard.m */,
+				BBD75054210C43FF00D35A42 /* AppState.h */,
+				BBD75055210C43FF00D35A42 /* AppState.m */,
+				BBD7505A210C616900D35A42 /* Constants.h */,
+				BBD7505B210C616900D35A42 /* Constants.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BBD75071210DC7E900D35A42 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BBD75067210D0C2700D35A42 /* WinView.h */,
+				BBD75068210D0C2700D35A42 /* WinView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BBD75072210DC87800D35A42 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				BBD7502A210B795D00D35A42 /* AppDelegate.h */,
+				BBD7502B210B795D00D35A42 /* AppDelegate.m */,
+				BBD75039210B795F00D35A42 /* main.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		BBD75073210DC89200D35A42 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				BBD75033210B795F00D35A42 /* Assets.xcassets */,
+				BBD75075210DC8EE00D35A42 /* Storyboards */,
+				BBD75071210DC7E900D35A42 /* Views */,
+				BBD7506F210DC6E800D35A42 /* Controllers */,
+				BBD75074210DC8B400D35A42 /* Utility */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		BBD75074210DC8B400D35A42 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				BBD7506A210DC1DF00D35A42 /* UIButton+BoardCell.h */,
+				BBD7506B210DC1DF00D35A42 /* UIButton+BoardCell.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		BBD75075210DC8EE00D35A42 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BBD75030210B795D00D35A42 /* Main.storyboard */,
+				BBD75035210B795F00D35A42 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BBD75076210DC93B00D35A42 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				BBD75038210B795F00D35A42 /* Info.plist */,
+				BBD75059210C49C300D35A42 /* TicTacToeHeaderPrefix.pch */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,7 +482,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TicTacToe/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TicTacToe/Configuration/TicTacToeHeaderPrefix.pch";
+				INFOPLIST_FILE = TicTacToe/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -434,7 +499,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TicTacToe/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TicTacToe/Configuration/TicTacToeHeaderPrefix.pch";
+				INFOPLIST_FILE = TicTacToe/Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
